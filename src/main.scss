@@ -1,0 +1,33 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem; font-family: 'Nata Sans', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.btn {
+    padding: $spacing-2 $spacing-3;
+    border: 2px solid $color-primary;
+    font-weight: bold;
+
+    border-radius: $spacing-1;
+    cursor: pointer;
+    transition: .2s;
+
+    &.btn-primary {
+        background: $color-primary;
+        border-color: $color-dark-primary;
+
+        &:focus, &:hover, &:active {
+            transform: translate(5px, -5px);
+            box-shadow: -5px 10px $color-accent;
+        }
+    }
+}

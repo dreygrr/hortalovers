@@ -1,0 +1,21 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.form {
+    @include doFlex(column, center, stretch, $spacing-2);
+    background: $color-white;
+
+    h1 {
+        text-align: center;
+    }
+
+    .field {
+        @include doFlex(column, center, stretch, $spacing-1);
+
+        input {
+            padding: $spacing-1;
+            border: 2px solid $color-lightgray;
+            border-radius: $spacing-1;
+        }
+    }
+}
